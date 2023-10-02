@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task4</title>
+    <style>
+        body{
+            padding:30px;
+            margin:50px;
+        }
+    </style>
+</head>
+<body>
+<h2>Displaying current date and time</h2>
+<!-- Buttons to display date and time -->
+<button onclick="showFormattedDate()">show date</button>
+<div id="output1"></div><br>
+<button onclick="showFormattedTime()">show Time</button>
+<div id="output2"></div>
+
+<script>
+    // Function to format and display the date
+    function showFormattedDate() {
+        const currentDate = new Date();
+        const formattedDate = `${currentDate.getDate()}/${currentDate.toLocaleString('default', { month: 'long' })}/${currentDate.getFullYear()}`;
+        document.getElementById('output1').innerText =formattedDate;
+    }
+
+    // Function to format and display the time
+    function showFormattedTime() {
+        const currentDate = new Date();
+        const formattedTime = currentDate.toString();
+        document.getElementById('output2').innerText =formattedTime;
+    }
+</script>
+</body>
+</html>

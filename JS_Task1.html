@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task1</title>
+    <style>
+        body{
+                margin:30px;
+                padding: 20px;
+                border :1px solid black;
+                width: 500px;
+        }
+        button:hover{
+            background-color:rgb(0, 166, 255);
+            border-color:rgb(0, 166, 255);
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Reverse of a number</h2>
+    <script>
+        function reverseNumber() {
+            const inputNumber = document.getElementById('inputNumber').value;
+            if (isNaN(inputNumber)) {
+                alert('Please enter a valid number!');
+                return;
+            }
+            const numString = inputNumber.toString();
+            const reversedString = numString.split('').reverse().join('');
+            document.getElementById('output').innerText =`${reversedString}`;
+        }
+    </script>
+    <input type="text" id="inputNumber" placeholder="Example x="><br><br>
+    <button onclick="reverseNumber()">Reverse</button><br><br>
+    <b>Reversed Number:</b>
+    <span id="output"></span>
+</body>
+</html>
